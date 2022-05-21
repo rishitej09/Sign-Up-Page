@@ -35,12 +35,14 @@ app.post("/" , function(req , res){
     };
 
     const jsonData = JSON.stringify(data);
+    
+    const YourMailChimpAudienceId = //GET IT FROM YOUR MAILCHIMP ACCOUNT.
 
-    const url = "https://us13.api.mailchimp.com/3.0/lists/bb54a7ab61";
+    const url = "https://us13.api.mailchimp.com/3.0/lists/"+ YourMailChimpAudienceId +";
 
     const options = {
         method:"post",
-        auth : "Rishi:0b79ef6bd997c265d06823e078b5c978-us13"
+        auth : "Rishi:"+ API KEY +"  //GET API KEY FROM YOUR MAILCHIMP ACCOUNT.
     }
     const request = https.request(url , options , function(response){
 
